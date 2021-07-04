@@ -14,7 +14,7 @@ class Body extends StatelessWidget
       body: Column(
         children: <Widget>[
           Expanded(
-            flex: 3,
+            flex: 2,
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -36,7 +36,7 @@ class Body extends StatelessWidget
                     children: <Widget>[
                       Text(
                         "SIGN IN",
-                        style: Theme.of(context).textTheme.display1,
+                        style: Theme.of(context).textTheme.headline4,
                       ),
                       Text(
                         "SIGN UP",

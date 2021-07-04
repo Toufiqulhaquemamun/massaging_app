@@ -5,14 +5,14 @@ import 'package:massaging_app/screen/chat/body.dart';
 import '../../constants.dart';
 
 
-
 class ChatsScreen extends StatefulWidget {
   @override
   _ChatsScreenState createState() => _ChatsScreenState();
 }
 
 class _ChatsScreenState extends State<ChatsScreen> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
           color: Colors.white,
         ),
       ),
-      bottomNavigationBar: buildBottomNavigationBar(),
+      // bottomNavigationBar: buildBottomNavigationBar(),
     );
   }
 
@@ -35,21 +35,23 @@ class _ChatsScreenState extends State<ChatsScreen> {
       type: BottomNavigationBarType.fixed,
       currentIndex: _selectedIndex,
       onTap: (value) {
-        setState(() {
-          _selectedIndex = value;
-        });
+        // setState(() {
+        //   _selectedIndex = value;
+        // });
+        _selectedIndex = value;
+
       },
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Chats"),
         BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
         BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
-        BottomNavigationBarItem(
-          icon: CircleAvatar(
+        BottomNavigationBarItem(icon: CircleAvatar(
             radius: 14,
             backgroundImage: AssetImage("assets/images/user_2.png"),
           ),
           label: "Profile",
         ),
+
       ],
     );
   }

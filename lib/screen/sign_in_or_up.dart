@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:massaging_app/widgets/primary_button.dart';
 import '../constants.dart';
-import 'chat/chats_screen.dart';
+import 'home/home.dart';
 import 'login/login_screen.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
@@ -29,7 +29,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                 press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ChatsScreen(),
+                    builder: (context) => MyHomePage(),
                   ),
                 ),
               ),

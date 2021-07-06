@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_statusbarcolor_ns/flutter_statusbarcolor_ns.dart';
+import 'package:massaging_app/constants.dart';
 import 'package:massaging_app/screen/call/call_screen.dart';
 import 'package:massaging_app/screen/chat/chats_screen.dart';
 import 'package:massaging_app/screen/people/people_screen.dart';
@@ -15,6 +17,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   int _selectedIndex = 0;
   final List<Widget> _widgetOptions = [ChatsScreen(),PeopleScreen(),CallScreen(),ProfilePage()];
   void _onItemTapped(int index) {
@@ -25,6 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    FlutterStatusbarcolor.setStatusBarColor(kBackgroundColor);
+    FlutterStatusbarcolor.setStatusBarWhiteForeground(true);
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
